@@ -12,3 +12,12 @@ with open('integers.txt', 'r') as numbers_file:
 
     # Convert the list of string to list of integer
     numbers = [int(number) for number in numbers]
+
+    # Check if number is even and square the number
+    even_numbers = [number**2 for number in numbers if number % 2 == 0]
+
+    # Write even numbers to double.txt
+    with open('double.txt', 'w') as even_file:
+        for number in even_numbers:
+            even_file.write(str(number) + ' ')
+            
