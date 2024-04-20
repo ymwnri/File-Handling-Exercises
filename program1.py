@@ -23,6 +23,8 @@ with open('numbers.txt', 'r') as numbers_file:
         for number in even_numbers:
             even_file.write(str(number) + ' ')
     
+    print('Even numbers:', even_numbers)
+    
     # Check if number is odd
     odd_numbers = [number for number in numbers if number % 2 != 0]
 
@@ -30,3 +32,5 @@ with open('numbers.txt', 'r') as numbers_file:
     with open('odd.txt', 'w') as odd_file:
         for number in odd_numbers:
             odd_file.write(str(number) + ' ')
+    
+    print('Odd numbers:', odd_numbers)
