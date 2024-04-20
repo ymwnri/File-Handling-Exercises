@@ -19,3 +19,14 @@ for line in content:
     # Store the name and GWA in the dictionary
     student_gwa[name] = float(gwa)
 
+# Get the students with the highest GWA
+highest_gwa = min(student_gwa.values())
+
+# Find the names of the students with the highest GWA
+students = [name for name, gwa in student_gwa.items() if gwa == highest_gwa]
+
+# Output the names of the students with the highest GWA
+if len(students) == 1:
+    print(f"The student with the highest GWA is {students[0]} with a GWA of {highest_gwa}")
+else:
+    print(f"The students with the highest GWA are {', '.join(students)} with a GWA of {highest_gwa}")
