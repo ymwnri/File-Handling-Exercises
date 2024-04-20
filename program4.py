@@ -20,6 +20,7 @@ with open('integers.txt', 'r') as numbers_file:
     with open('double.txt', 'w') as even_file:
         for number in even_numbers:
             even_file.write(str(number) + ' ')
+        print('Even numbers:', even_numbers)
     
     # Check if number is odd and cube the number
     odd_numbers = [number**3 for number in numbers if number % 2 != 0]
@@ -28,3 +29,4 @@ with open('integers.txt', 'r') as numbers_file:
     with open('triple.txt', 'w') as odd_file:
         for number in odd_numbers:
             odd_file.write(str(number) + ' ')
+        print('Odd numbers:', odd_numbers)
